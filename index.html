@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometizer App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Geometizer App</h1>
+        <form id="geoForm">
+            <label for="shape">Choose a shape:</label>
+            <select id="shape" required onchange="displayInputs()">
+                <option value="">--Select a Shape--</option>
+                <option value="square">Square</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="circle">Circle</option>
+                <option value="triangle">Triangle</option>
+            </select>
+
+            <!-- Input fields for different shapes -->
+            <div id="inputFields"></div>
+
+            <!-- Color input -->
+            <label for="color">Choose a color:</label>
+            <input type="color" id="color" value="#000000">
+
+            <button type="button" onclick="drawShape()">Draw Shape</button>
+        </form>
+
+        <!-- Canvas to draw the shape -->
+        <canvas id="shapeCanvas" width="300" height="300"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
